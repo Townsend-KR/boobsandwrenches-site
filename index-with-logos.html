@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Boobs & Wrenches</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .logo-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .logo-links a {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      background: #222;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      gap: 0.5rem;
+      border: 1px solid #444;
+      transition: background 0.2s ease;
+    }
+    .logo-links a:hover {
+      background: #444;
+    }
+    .logo-links img {
+      height: 20px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="card">
+      <h1>Boobs &amp; Wrenches</h1>
+      <p><strong>Unleash the Blueprint</strong></p>
+      <p>Custom tools, honest builds, voltage, and vengeance. Site refresh underway.</p>
+      <div class="logo-links">
+        <a href="https://townsendk.myportfolio.com" target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Adobe_Symbol_Logo_2017.svg" alt="Adobe" />
+          Portfolio
+        </a>
+        <a href="https://behance.net/karatownsend1" target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/Behance_Logo.svg" alt="Behance" />
+          Behance
+        </a>
+      </div>
+      <footer style="margin-top:2rem;">© <span id="y"></span> Boobs &amp; Wrenches</footer>
+    </div>
+  </main>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
