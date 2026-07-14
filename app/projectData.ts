@@ -40,7 +40,7 @@ export const sitePages: SitePage[] = [
     ],
   },
   {
-    slug: "Boobs Gets Down to th",
+    slug: "3d-printing",
     title: "3D Printing",
     eyebrow: "PRINT | PAINT | POUR | DISPLAY",
     intro:
@@ -163,21 +163,21 @@ export const sitePages: SitePage[] = [
         description:
           "Grammar, structure, tone, clarity, formatting, and general word-herding.",
       },
-      {
-        name: "Federal and state legal document formatting",
-        price: "Quoted individually",
-        description:
-          "Formatting, cleanup, organization, proofreading, and draft preparation support for federal or state documents based on client-provided facts, arguments, and instructions. No legal advice, no representation, no attorney-client relationship.",
-      },
-      {
-        name: "Self-represented filing support",
-        price: "Quoted individually",
-        description:
-          "Document organization, structure review, exhibit lists, formatting consistency, captions, certificates of service, and readability cleanup for pro se filings.",
-      },
-    ],
-  },
-  {
+         {
+      name: "Federal and state legal document formatting",
+      price: "Quoted individually",
+      description:
+        "Formatting, cleanup, organization, proofreading, and draft preparation support for federal or state documents based on client-provided facts, arguments, and instructions. No legal advice, no representation, no attorney-client relationship.",
+    },
+    {
+      name: "Self-represented filing support",
+      price: "Quoted individually",
+      description:
+        "Document organization, structure review, exhibit lists, formatting consistency, captions, certificates of service, and readability cleanup for pro se filings.",
+    },
+  ],
+},
+{
   slug: "tools-for-sale",
   title: "Tools for Sale",
   eyebrow: "USED | USEFUL | AS-IS | AVAILABLE",
@@ -209,11 +209,25 @@ Clean, well-kept, and ready to work. A solid option for homeowners, DIYers, or a
           src: "/images/projects/tools-for-sale/kobalt_deals/recip_saw/serial-number.jpg",
           alt: "Serial number label on the Kobalt reciprocating saw",
         },
-        {
-          src: "/images/projects/tools-for-sale/kobalt_deals/recip_saw/video_file.MOV",
-          alt: "Serial number label on the Kobalt reciprocating saw",
-        },
       ],
+    },
+    {
+      name: "TOOL NAME HERE",
+      price: "PRICE HERE",
+      description:
+        "INSERT TOOL DESCRIPTION HERE. Include brand, model, condition, size, included accessories, pickup or shipping note, and any flaws.",
+    },
+    {
+      name: "TOOL NAME HERE",
+      price: "PRICE HERE",
+      description:
+        "INSERT TOOL DESCRIPTION HERE. Include brand, model, condition, size, included accessories, pickup or shipping note, and any flaws.",
+    },
+    {
+      name: "TOOL NAME HERE",
+      price: "PRICE HERE",
+      description:
+        "INSERT TOOL DESCRIPTION HERE. Include brand, model, condition, size, included accessories, pickup or shipping note, and any flaws.",
     },
     {
       name: "TOOL NAME HERE",
@@ -223,28 +237,8 @@ Clean, well-kept, and ready to work. A solid option for homeowners, DIYers, or a
     },
   ],
 },
-    
-      {
-        name: "TOOL NAME HERE",
-        price: "PRICE HERE",
-        description:
-          "INSERT TOOL DESCRIPTION HERE. Include brand, model, condition, size, included accessories, pickup or shipping note, and any flaws.",
-      },
-      {
-        name: "TOOL NAME HERE",
-        price: "PRICE HERE",
-        description:
-          "INSERT TOOL DESCRIPTION HERE. Include brand, model, condition, size, included accessories, pickup or shipping note, and any flaws.",
-      },
-      {
-        name: "TOOL NAME HERE",
-        price: "PRICE HERE",
-        description:
-          "INSERT TOOL DESCRIPTION HERE. Include brand, model, condition, size, included accessories, pickup or shipping note, and any flaws.",
-      },
-    ],
-  },
 ];
+  
 
 export function getPageBySlug(slug: string) {
   return sitePages.find((page) => page.slug === slug);
