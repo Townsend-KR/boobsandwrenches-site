@@ -188,17 +188,21 @@ export const sitePages: SitePage[] = [
     title: "Tools for Sale",
     eyebrow: "USED | USEFUL | AS-IS | AVAILABLE",
     intro:
-      "Used tools, shop extras, supplies, and equipment available for local pickup or agreed shipping. No cart. No checkout. Just tools that need a new bench.",
+      "Most Tools Have a Tool | Battery | Charger set option, Used tools, shop extras, supplies, and equipment available for local pickup or agreed shipping. No cart. No checkout. Just tools that need a new bench.",
     note:
       "All items are sold as-is. Availability may change. Contact for questions and purchase, shipping based on tool and destination.",
     imageFolder: "/images/tools-for-sale",
     prices: [
       {
-        name: "TOOL NAME HERE",
-        price: "PRICE HERE",
-        description:
-          "INSERT TOOL DESCRIPTION HERE. Include brand, model, condition, size, included accessories, pickup or shipping note, and any flaws.",
-      },
+  name: "Kobalt Reciprocating Saw RS 1824B-03",
+  price:
+    "Tool only: $90 | Battery and charger available for an additional $40–$85",
+  description: `Lightly used Kobalt RS 1824B-03 24V reciprocating saw. It has only been used about twice, so the motor and blade are in excellent condition.
+
+Built for demolition, trimming, remodeling, and quick jobsite fixes. It cuts through wood, nails, and the mystery materials older projects tend to hide.
+
+Clean, well-kept, and ready to work. A solid option for homeowners, DIYers, or anyone who wants a dependable saw without the wear of a heavily used tool.`,
+},
       {
         name: "TOOL NAME HERE",
         price: "PRICE HERE",
