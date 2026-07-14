@@ -40,7 +40,7 @@ export const sitePages: SitePage[] = [
     ],
   },
   {
-    slug: "3d-printing",
+    slug: "Boobs Gets Down to th",
     title: "3D Printing",
     eyebrow: "PRINT | PAINT | POUR | DISPLAY",
     intro:
@@ -178,48 +178,52 @@ export const sitePages: SitePage[] = [
     ],
   },
   {
-    slug: "tools-for-sale",
-    title: "Tools for Sale",
-    eyebrow: "USED | USEFUL | AS-IS | AVAILABLE",
-    intro:
-      "Most Tools Have a Tool | Battery | Charger set option, Used tools, shop extras, supplies, and equipment available for local pickup or agreed shipping. No cart. No checkout. Just tools that need a new bench.",
-    note:
-      "All items are sold as-is. Availability may change. Contact for questions and purchase, shipping based on tool and destination.",
-    imageFolder: "/images/tools-for-sale",
-    prices: [
-      {
-  name: "Kobalt Reciprocating Saw RS 1824B-03",
-  price:
-    "Tool only: $90 | Battery and charger available for an additional $40–$85",
-  description: `Lightly used Kobalt RS 1824B-03 24V reciprocating saw. It has only been used about twice, so the motor and blade are in excellent condition.
+  slug: "tools-for-sale",
+  title: "Tools for Sale",
+  eyebrow: "USED | USEFUL | AS-IS | AVAILABLE",
+  intro:
+    "Most tools have a tool-only option or a tool, battery, and charger set. Used tools, shop extras, supplies, and equipment are available for local pickup or agreed shipping. No cart. No checkout. Just tools that need a new bench.",
+  note:
+    "All items are sold as-is. Availability may change. Contact for questions and purchase. Shipping depends on the tool and destination.",
+  imageFolder: "/images/tools-for-sale",
+  prices: [
+    {
+      name: "Kobalt Reciprocating Saw RS 1824B-03",
+      price:
+        "Tool only: $90 | Battery and charger available for an additional $40–$85",
+      description: `Lightly used Kobalt RS 1824B-03 24V reciprocating saw. It has only been used about twice, so the motor and blade are in excellent condition.
 
 Built for demolition, trimming, remodeling, and quick jobsite fixes. It cuts through wood, nails, and the mystery materials older projects tend to hide.
 
 Clean, well-kept, and ready to work. A solid option for homeowners, DIYers, or anyone who wants a dependable saw without the wear of a heavily used tool.`,
-  images: [
-    {
-      src: "/images/tools-for-sale/kobalt deals-LEFT_BRAND_SIDE.jpg",
-      alt: "Kobalt RS 1824B-03 reciprocating saw",
+      images: [
+        {
+          src: "/images/projects/tools-for-sale/kobalt_deals/recip_saw/left-brand-side.jpg",
+          alt: "Left side of the Kobalt RS 1824B-03 reciprocating saw",
+        },
+        {
+          src: "/images/projects/tools-for-sale/kobalt_deals/recip_saw/right-side.jpg",
+          alt: "Right side of the Kobalt reciprocating saw",
+        },
+        {
+          src: "/images/projects/tools-for-sale/kobalt_deals/recip_saw/serial-number.jpg",
+          alt: "Serial number label on the Kobalt reciprocating saw",
+        },
+        {
+          src: "/images/projects/tools-for-sale/kobalt_deals/recip_saw/video_file.MOV",
+          alt: "Serial number label on the Kobalt reciprocating saw",
+        },
+      ],
     },
     {
-      src: "/images/tools-for-sale/kobalt deals-Movie.mov",
-      alt: "Video of the Kobalt reciprocating saw",
+      name: "TOOL NAME HERE",
+      price: "PRICE HERE",
+      description:
+        "INSERT TOOL DESCRIPTION HERE. Include brand, model, condition, size, included accessories, pickup or shipping note, and any flaws.",
     },
-    {
-      src: "/images/tools-for-sale/kobalt deals-RIGHT_SIDE.jpg",
-      alt: "Kobalt reciprocating saw blade and shoe detail",
-    },
-    {
-      src: "/images/tools-for-sale/kobalt deals-SERIAL_NUMBER.jpg",
-      alt: "Kobalt reciprocating saw blade and shoe detail",
   ],
 },
-      {
-        name: "TOOL NAME HERE",
-        price: "PRICE HERE",
-        description:
-          "INSERT TOOL DESCRIPTION HERE. Include brand, model, condition, size, included accessories, pickup or shipping note, and any flaws.",
-      },
+    
       {
         name: "TOOL NAME HERE",
         price: "PRICE HERE",
