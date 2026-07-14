@@ -1,9 +1,3 @@
-export type PriceItem = {
-  name: string;
-  price: string;
-  description: string;
-};
-
 export type SitePage = {
   slug: string;
   title: string;
@@ -202,6 +196,23 @@ export const sitePages: SitePage[] = [
 Built for demolition, trimming, remodeling, and quick jobsite fixes. It cuts through wood, nails, and the mystery materials older projects tend to hide.
 
 Clean, well-kept, and ready to work. A solid option for homeowners, DIYers, or anyone who wants a dependable saw without the wear of a heavily used tool.`,
+  images: [
+    {
+      src: "/images/tools-for-sale/kobalt deals-LEFT_BRAND_SIDE.jpg",
+      alt: "Kobalt RS 1824B-03 reciprocating saw",
+    },
+    {
+      src: "/images/tools-for-sale/kobalt deals-Movie.mov",
+      alt: "Video of the Kobalt reciprocating saw",
+    },
+    {
+      src: "/images/tools-for-sale/kobalt deals-RIGHT_SIDE.jpg",
+      alt: "Kobalt reciprocating saw blade and shoe detail",
+    },
+    {
+      src: "/images/tools-for-sale/kobalt deals-SERIAL_NUMBER.jpg",
+      alt: "Kobalt reciprocating saw blade and shoe detail",
+  ],
 },
       {
         name: "TOOL NAME HERE",
