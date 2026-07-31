@@ -1,0 +1,220 @@
+export const metadata = {
+  title:
+    "Hardening the Garage: A Risk-Based Security Review of a Next.js Portfolio",
+  description:
+    "An RMF-informed assessment covering system boundaries, vulnerabilities, remediation, and continuous monitoring.",
+};
+
+Hardening the Garage: A Risk-Based Security Review of a Next.js Portfolio
+
+Cybersecurity Case Study · NIST RMF · Vulnerability Management
+
+Scope statement: This is a portfolio-scale application of NIST Risk Management Framework concepts. It is not a federal authorization package, formal control assessment, or claim of regulatory compliance.
+
+Executive Summary
+
+I performed a predeployment security review of Boobs & Wrenches, a public Next.js website hosted through Vercel and maintained in GitHub.
+
+The assessment focused on the system boundary, software dependencies, public content exposure, application routes, publishing architecture, HTTP security headers, and deployment workflow. The objective was to identify unnecessary attack surface, document findings, assign corrective actions, and establish repeatable validation steps before public deployment.
+
+The initial review identified four primary concerns:
+
+1. The installed Next.js version required security updates.
+2. A planned login and API introduced unnecessary authoring risk.
+3. Production security headers had not yet been verified.
+4. Public files and repository content required a final exposure review.
+
+The findings were recorded in a miniature Plan of Action and Milestones, or POA&M, to distinguish identified risk from verified remediation.
+
+System Boundary and Inventory
+
+The assessed system includes the code, content, dependencies, repository, deployment pipeline, and public hosting configuration supporting the website.
+
+Component	Purpose	Data handled	Responsibility
+Next.js application	Renders public pages and navigation	Public site content	Application owner
+MDX content	Stores Notes and Bench & Bytes articles	Public writing and metadata	Application owner
+GitHub repository	Source control and change history	Code, configuration, public content	Shared with GitHub
+Vercel deployment	Builds and hosts the application	Public build artifacts and logs	Shared with Vercel
+Domain and DNS	Directs visitors to the deployment	Public routing information	Application owner/provider
+External links	Connect visitors to GitHub, LinkedIn, and email	Destination URLs only	External providers
+
+The intended system does not require customer accounts, payment processing, visitor file uploads, private forensic evidence, or a public administrative interface.
+
+Informal Impact Assessment
+
+This assessment did not assign a formal federal system categorization. For risk-planning purposes, I used the following informal impact assumptions:
+
+* Confidentiality: Low. Published content is intentionally public.
+* Integrity: Moderate. Unauthorized modification could damage professional credibility or publish malicious content.
+* Availability: Low. An outage would be disruptive but would not interrupt a mission-critical service.
+
+These assumptions guided proportionate security decisions. Protecting publishing integrity was more important than creating complex confidentiality controls for information intended to be public.
+
+Assessment Method
+
+I used a lightweight process modeled on the RMF activities described in NIST SP 800-37 Revision 2:
+
+1. Defined the system boundary and intended use.
+2. Inventoried components and information types.
+3. Identified relevant threats and control objectives.
+4. Reviewed dependencies, routes, content storage, and deployment configuration.
+5. Documented findings and corrective actions.
+6. Defined evidence required to validate closure.
+7. Established recurring monitoring activities.
+
+Relevant control concepts were drawn from NIST SP 800-53 Revision 5, but this exercise does not claim formal control implementation or assessment.
+
+Findings
+
+F-01: Outdated Next.js Dependency
+
+Condition: The development environment was running Next.js 16.2.7.
+
+Risk: Version 16.2.7 fell below the patched version identified in recently published Next.js security advisories. Exploitability depends on the application’s specific features and configuration, but retaining a version within an affected range would create unnecessary exposure.
+
+Corrective action: Update Next.js and compatible React packages, rebuild the application, run a production dependency audit, and review the resulting lockfile changes.
+
+Validation evidence:
+
+* Updated package.json and lockfile
+* Successful production build
+* Production dependency-audit output
+* Recorded framework version after remediation
+
+Status: Open pending update and validation.
+
+F-02: Unnecessary Login and Writable API Surface
+
+Condition: The initial design included a login route and API functionality for authoring Notes.
+
+Risk: A browser-based authoring system would require secure credential handling, server-side authorization, session management, input validation, CSRF protection, rate limiting, logging, and ongoing vulnerability management.
+
+The system has one author, and all published content is public. The additional attack surface was not justified by the mission requirement.
+
+Corrective action: Store articles as static MDX files maintained through GitHub. Remove authoring routes and writable APIs from the public deployment unless a future requirement justifies them.
+
+Validation evidence:
+
+* Route inventory showing no public authoring endpoint
+* Repository search confirming removal of unused authentication logic
+* Successful build and navigation test
+* Verification that published content remains read-only
+
+Status: In progress.
+
+F-03: Security Headers Not Verified
+
+Condition: The application had not yet been assessed for production HTTP security headers.
+
+Risk: Missing or weak headers can increase exposure to clickjacking, content-type confusion, excessive referrer disclosure, browser-feature abuse, and some forms of script injection.
+
+Corrective action: Configure appropriate headers in next.config.ts, including:
+
+* Content Security Policy
+* X-Content-Type-Options
+* Referrer Policy
+* Permissions Policy
+* Frame restrictions
+* HTTP Strict Transport Security after HTTPS deployment is confirmed
+
+Validation evidence:
+
+* Production response headers
+* Browser developer-tools capture
+* HTTP Observatory results
+* OWASP ZAP Baseline report
+
+Status: Open.
+
+F-04: Public Content and Secret-Exposure Review Required
+
+Condition: The application contains public images, downloadable files, contact information, and repository-managed configuration.
+
+Risk: Files placed in the public directory are intentionally retrievable. Credentials, environment files, private forensic material, image-location metadata, or internal documents could be exposed if copied into the repository or public directory accidentally.
+
+Corrective action: Review tracked files, Git history, environment-variable usage, public assets, image metadata, and deployment configuration. Confirm that no sensitive forensic evidence or credentials are included.
+
+Validation evidence:
+
+* Reviewed Git file inventory
+* Verified .gitignore
+* Secret-scanning results
+* Public-directory inventory
+* Metadata review for published photographs
+
+Status: Open.
+
+Operational Quality Observations
+
+The review also identified a duplicated navigation header and an invalid route containing spaces. These were quality and configuration defects rather than security vulnerabilities.
+
+The duplicate navigation was corrected by retaining the global navigation in app/layout.tsx and removing the redundant menu from app/page.tsx. The invalid route was corrected by separating the displayed title, “The Bench & Bytes,” from its URL-safe route, /the-bench.
+
+This distinction matters: defects should be classified accurately rather than inflated into security findings.
+
+Plan of Action and Milestones
+
+ID	Finding	Risk	Corrective action	Status	Closure evidence
+F-01	Outdated framework dependency	Moderate	Update dependencies and rebuild	Open	Audit and build output
+F-02	Unnecessary login/API surface	Moderate	Replace with static MDX publishing	In progress	Route and code review
+F-03	Headers not verified	Moderate	Configure and test headers	Open	Header scan results
+F-04	Public-content review required	Moderate	Review repository, assets, and metadata	Open	Inventory and scan results
+Q-01	Duplicate navigation	Low	Remove page-level duplicate	Closed	Visual and route testing
+Q-02	Invalid Bench route	Low	Use /the-bench	Closed	Successful HTTP response
+
+Dates, responsible parties, and actual completion evidence should be added as each item is addressed.
+
+Control Alignment
+
+The assessment activities have conceptual relationships to several NIST SP 800-53 controls:
+
+Control	Relationship to this exercise
+CM-8, System Component Inventory	Documenting application, repository, hosting, and content components
+CM-3, Configuration Change Control	Using reviewed Git commits and repeatable deployments
+RA-5, Vulnerability Monitoring and Scanning	Auditing dependencies and performing a baseline web scan
+SI-2, Flaw Remediation	Updating affected software and validating the build
+CA-7, Continuous Monitoring	Repeating dependency, header, and deployment checks
+AC-3, Access Enforcement	Protecting authoring capability if it is retained
+IA-2, Identification and Authentication	Authenticating the site owner if an administrative interface exists
+SC-8, Transmission Confidentiality and Integrity	Serving the deployed site through HTTPS
+
+This table documents learning and control intent. It does not represent a formal control assessment or an assertion that the system satisfies a federal baseline.
+
+Remediation Validation Plan
+
+A finding will not be marked closed merely because code was changed. Closure requires evidence.
+
+Planned validation includes:
+
+1. Running a clean production build.
+2. Auditing production dependencies.
+3. Testing all navigation and downloadable links.
+4. Confirming the absence of unintended administrative routes.
+5. Inspecting production response headers.
+6. Running an OWASP ZAP Baseline Scan against the authorized deployment.
+7. Reviewing Vercel deployment logs for errors.
+8. Recording the final result and evidence reference in the POA&M.
+
+Any failed validation will return the finding to an open or in-progress state.
+
+Residual Risk and Continuous Monitoring
+
+Even after the initial findings are remediated, residual risk remains. Dependencies can develop new vulnerabilities, external providers can change behavior, links can fail, and new content can introduce unintended exposure.
+
+The continuous-monitoring plan includes:
+
+* Automated dependency alerts through GitHub
+* Dependency review before major deployments
+* Production builds before pushing changes
+* Periodic review of public assets and downloadable files
+* Header testing after configuration changes
+* Baseline scanning after significant releases
+* Immediate review of critical Next.js or React advisories
+
+Conclusion
+
+The most valuable outcome of this assessment was not the addition of more security technology. It was the identification of functionality the system did not need.
+
+Moving to static MDX publishing reduces the number of credentials, sessions, endpoints, and state-changing operations requiring protection. The remaining controls can therefore focus on the site’s actual priorities: preserving publishing integrity, maintaining supported dependencies, preventing unintended data exposure, and documenting changes through repeatable evidence.
+
+The exercise reinforced a central risk-management principle: security decisions should be traceable to system purpose, documented findings, corrective action, and verified closure.

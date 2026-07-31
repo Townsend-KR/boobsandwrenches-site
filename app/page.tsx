@@ -18,47 +18,6 @@ export default function Home() {
       className={`${bodyFont.className} min-h-screen bg-[#050607] px-6 py-8 text-[#E5E7EB]`}
     >
       <div className="mx-auto max-w-6xl">
-        <nav className="mb-10 flex flex-col items-center justify-between gap-5 px-2 py-4 md:flex-row">
-          <Link href="/" className="flex items-center gap-4">
-            <Image
-              src="/images/logo.png"
-              alt="Boobs & Wrenches logo"
-              width={72}
-              height={72}
-              priority
-              className="h-14 w-14 rounded-full object-contain"
-            />
-            <span className="text-2xl font-bold tracking-tight text-[#C9A24A]">
-              Boobs &amp; Wrenches
-            </span>
-          </Link>
-          <div className="flex flex-wrap justify-center gap-4 text-sm font-semibold uppercase tracking-[0.18em]">
-            <a
-              href="#studio"
-              className="text-[#9C7730] transition hover:text-[#E0C26B]"
-            >
-              The Studio
-            </a>
-            <a
-              href="#work"
-              className="text-[#9C7730] transition hover:text-[#E0C26B]"
-            >
-              Work
-            </a>
-            <Link
-              href="/tools-for-sale"
-              className="text-[#9C7730] transition hover:text-[#E0C26B]"
-            >
-              Tools
-            </Link>
-            <a
-              href="#contact"
-              className="text-[#9C7730] transition hover:text-[#E0C26B]"
-            >
-              Contact
-            </a>
-          </div>
-        </nav>
         <header className="mb-20 text-center">
           <div className="mb-10 flex justify-center">
             <Image
@@ -93,6 +52,66 @@ export default function Home() {
             </Link>
           </div>
         </header>
+        <section
+          id="tech"
+          className="scroll-mt-8 my-8 rounded-2xl border border-[#2A2F35] bg-[#111417] p-6"
+        >
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-[#9C7730]">
+            Under the Hood
+          </p>
+
+          <h2 className="mb-8 text-3xl font-bold text-[#E0C26B]">
+            Security, forensics, systems, and code.
+          </h2>
+
+          <div className="grid gap-4 text-left md:grid-cols-2">
+            <article className="rounded-xl border border-[#2A2F35] p-5">
+              <h3 className="mb-3 text-xl font-bold text-[#E0C26B]">
+                Cybersecurity &amp; GRC
+              </h3>
+              <p className="leading-7 text-[#A1A1AA]">
+                NIST RMF and SP 800-53 foundations • ATO lifecycle • FISMA
+                concepts • security documentation
+              </p>
+            </article>
+
+            <article className="rounded-xl border border-[#2A2F35] p-5">
+              <h3 className="mb-3 text-xl font-bold text-[#E0C26B]">
+                Digital Forensics
+              </h3>
+              <p className="leading-7 text-[#A1A1AA]">
+                SQLite/WAL/SHM analysis • file recovery • timeline and metadata
+                review • SHA-256 validation
+              </p>
+            </article>
+
+            <article className="rounded-xl border border-[#2A2F35] p-5">
+              <h3 className="mb-3 text-xl font-bold text-[#E0C26B]">
+                Development
+              </h3>
+              <p className="leading-7 text-[#A1A1AA]">
+                Python • SQL • HTML/CSS • Git/GitHub • C/C++ fundamentals
+              </p>
+            </article>
+
+            <article className="rounded-xl border border-[#2A2F35] p-5">
+              <h3 className="mb-3 text-xl font-bold text-[#E0C26B]">
+                Systems &amp; Analysis
+              </h3>
+              <p className="leading-7 text-[#A1A1AA]">
+                macOS and Linux command line • SSH • packet-capture and log
+                review • network and device inventory
+              </p>
+            </article>
+          </div>
+
+          <p className="mt-6 text-sm text-[#A1A1AA]">
+            <span className="font-semibold text-[#E0C26B]">
+              Currently pursuing:
+            </span>{" "}
+            CompTIA Security+
+          </p>
+        </section>
         <section
           id="studio"
           className="mb-14 scroll-mt-8 rounded-2xl border border-[#2A2F35] bg-[#111417] p-6 md:p-8"
@@ -211,6 +230,7 @@ export default function Home() {
         </section>
         <section
           id="contact"
+
           className="scroll-mt-8 rounded-2xl border border-[#2A2F35] bg-[#111417] p-6 text-center md:p-8"
         >
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-[#9C7730]">
@@ -238,6 +258,51 @@ export default function Home() {
           >
             kara@boobsandwrenches.com
           </a>
+          <div className="mt-10 border-t border-[#2A2F35] pt-8">
+  <p className="mb-5 text-sm font-semibold uppercase tracking-[0.25em] text-[#9C7730]">
+    Professional Links
+  </p>
+
+  <div className="flex flex-wrap justify-center gap-3">
+    <a
+      href="https://github.com/Townsend-KR"
+      target="_blank"
+      rel="noreferrer"
+      className="rounded-full border border-[#9C7730] px-5 py-3 font-semibold text-[#E0C26B] transition hover:border-[#E0C26B] hover:bg-[#1A1E22]"
+    >
+      GitHub
+    </a>
+
+    <a
+      href="https://www.linkedin.com/in/kara-townsend-boobs-and-wrenches"
+      target="_blank"
+      rel="noreferrer"
+      className="rounded-full border border-[#9C7730] px-5 py-3 font-semibold text-[#E0C26B] transition hover:border-[#E0C26B] hover:bg-[#1A1E22]"
+    >
+      LinkedIn
+    </a>
+
+    <a
+      href="mailto:kara@minicommand.org?subject=Professional%20Inquiry"
+      className="rounded-full border border-[#9C7730] px-5 py-3 font-semibold text-[#E0C26B] transition hover:border-[#E0C26B] hover:bg-[#1A1E22]"
+    >
+      Professional Email
+    </a>
+
+    <a
+      href="/Kara_Townsend_Cybersecurity_Resume.pdf"
+      target="_blank"
+      rel="noreferrer"
+      className="rounded-full border border-[#9C7730] px-5 py-3 font-semibold text-[#E0C26B] transition hover:border-[#E0C26B] hover:bg-[#1A1E22]"
+    >
+      Cybersecurity Résumé
+    </a>
+  </div>
+
+  <p className="mt-5 text-sm text-[#A1A1AA]">
+    kara@minicommand.org
+  </p>
+</div>
         </section>
       </div>
     </main>

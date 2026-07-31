@@ -11,6 +11,14 @@ type BenchPost = {
 
 const benchPosts: BenchPost[] = [
   {
+  title: "Hardening the Garage",
+  category: "Cybersecurity Case Study",
+  description:
+    "A risk-based security review of this Next.js portfolio using NIST RMF, vulnerability management, and practical remediation.",
+  href: "/the-bench/hardening-the-garage",
+  buttonText: "Read Case Study",
+},
+  {
     title: "Tools Worth Keeping on the Bench",
     category: "Shop Favorites",
     description:
@@ -23,7 +31,7 @@ const benchPosts: BenchPost[] = [
     title: "What the Project Taught Me",
     category: "Build Notes",
     description:
-      "Build stories, mistakes, fixes, material arguments, and lessons learned when the original plan met physical reality.",
+      "Short reviews, basic plans, words of wisdom, and simple solutions for complex problems.",
     href: "#",
     buttonText: "Coming Soon",
   },
@@ -52,9 +60,7 @@ export default function TheBenchPage() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#A1A1AA]">
-            Shop stories, build notes, tool reviews, project lessons, and
-            recommendations for things that have earned their place on the
-            bench.
+            Shop stories, complex builds, technical projects, and a few lessons learned along the way."
           </p>
         </header>
 

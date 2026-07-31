@@ -53,7 +53,12 @@ export default function RootLayout({
               >
                 Home
               </Link>
-
+              <Link
+                href="/#tech"
+                className="text-[#A1A1AA] transition hover:text-[#E0C26B]"
+              >
+                 Tech
+              </Link>
               <Link
                 href="/woodworking"
                 className="text-[#A1A1AA] transition hover:text-[#E0C26B]"
@@ -88,12 +93,17 @@ export default function RootLayout({
               >
                 Tools
               </Link>
-
               <Link
+                href="/notes"
+                 className="text-[#A1A1AA] transition hover:text-[#E0C26B]"
+              >
+                Notes
+              </Link>
+               <Link
                 href="/the-bench"
                 className="text-[#A1A1AA] transition hover:text-[#E0C26B]"
               >
-                The Bench
+                The Bench &amp; Bytes
               </Link>
 
               <Link

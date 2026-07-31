@@ -8,6 +8,13 @@ export type SitePage = {
   prices: PriceItem[];
 };
 
+export type PriceItem = {
+  name: string;
+  price: string;
+  description: string;
+  images?: { src: string; alt: string }[];
+};
+
 export const sitePages: SitePage[] = [
   {
     slug: "woodworking",
@@ -23,7 +30,7 @@ export const sitePages: SitePage[] = [
         name: "Cutting boards",
         price: "Starting at $75",
         description:
-          "Handmade cutting boards built with clean lines, durable finishes, and enough weight to feel like a proper kitchen object instead of decorative nonsense.",
+          "Handmade cutting boards built with clean lines, durable finishes, and enough weight to feel like a proper kitchen tool instead of decoration.",
       },
       {
         name: "Hair sticks",
@@ -212,14 +219,14 @@ Clean, well-kept, and ready to work. A solid option for homeowners, DIYers, or a
       ],
     },
     {
-      name: "TOOL NAME HERE",
-      price: "PRICE HERE",
+      name: "Hercules 7 1/4 in. Circular Saw",
+      price: "$50.00",
       description:
-        "INSERT TOOL DESCRIPTION HERE. Include brand, model, condition, size, included accessories, pickup or shipping note, and any flaws.",
+        "Selling a Hercules 20V Brushless 7-1/4 Circular Saw. Only used a few times, in great condition. Comes with the original blade and case. Local pickup preferred; shipping available at buyer's expense.",
     },
     {
-      name: "TOOL NAME HERE",
-      price: "PRICE HERE",
+      name: "kobalt KXRS 7 1/4 inch Circular Saw",
+      price: "$70.00 for tool only, $100.00 with 4ah battery and charger",
       description:
         "INSERT TOOL DESCRIPTION HERE. Include brand, model, condition, size, included accessories, pickup or shipping note, and any flaws.",
     },
