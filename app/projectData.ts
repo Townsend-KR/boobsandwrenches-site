@@ -228,7 +228,7 @@ Clean, well-kept, and ready to work. A solid option for homeowners, DIYers, or a
       name: "kobalt KXRS 7 1/4 inch Circular Saw",
       price: "$70.00 for tool only, $100.00 with 4ah battery and charger",
       description:
-        "INSERT TOOL DESCRIPTION HERE. Include brand, model, condition, size, included accessories, pickup or shipping note, and any flaws.",
+        "Used once or twice. Condition is like new. $70 tool only or $100 with 4Ah battery and charger.",
       images: [
         {
           src: "/images/projects/tools-for-sale/kobalt_deals/circular_saw/RIGHT_BRAND_SIDE.jpeg",
