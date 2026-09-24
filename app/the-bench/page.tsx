@@ -11,6 +11,14 @@ type BenchPost = {
 
 const benchPosts: BenchPost[] = [
   {
+    title: "204 GB. 64 GB Drive. What Actually Transferred?",
+    category: "Digital Forensics",
+    description:
+      "Data from an original 204 GB Apple Messages chat.db database was recovered from the unallocated space of a 64 GB USB drive. The presence of the recovered data is established. How much of the original database transferred, what survived, and what the remaining artifacts can reconstruct are the questions this project examines.",
+    href: "https://github.com/Townsend-KR/iOS-Logical-Extraction-and-Artifact-Parsing-Methodology",
+    buttonText: "View Methodology on GitHub",
+  },
+  {
   title: "Hardening the Garage",
   category: "Cybersecurity Case Study",
   description:
