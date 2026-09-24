@@ -229,6 +229,20 @@ Clean, well-kept, and ready to work. A solid option for homeowners, DIYers, or a
       price: "$70.00 for tool only, $100.00 with 4ah battery and charger",
       description:
         "INSERT TOOL DESCRIPTION HERE. Include brand, model, condition, size, included accessories, pickup or shipping note, and any flaws.",
+      images: [
+        {
+          src: "/images/projects/tools-for-sale/kobalt_deals/circular_saw/RIGHT_BRAND_SIDE.jpeg",
+          alt: "Kobalt 24V Max brushless 7 1/4 inch circular saw, right side",
+        },
+        {
+          src: "/images/projects/tools-for-sale/kobalt_deals/circular_saw/ANGLED_VIEW.jpeg",
+          alt: "Angled view of Kobalt 24V Max brushless circular saw",
+        },
+        {
+          src: "/images/projects/tools-for-sale/kobalt_deals/circular_saw/SIDE_VIEW.jpeg",
+          alt: "Side view of Kobalt 24V Max brushless circular saw",
+        },
+      ],
     },
     {
       name: "TOOL NAME HERE",
