@@ -283,7 +283,7 @@ export default function Home() {
     </a>
 
     <a
-      href="mailto:kara@minicommand.org?subject=Professional%20Inquiry"
+      href="mailto:kara@boobsandwrenches.com?subject=Professional%20Inquiry"
       className="rounded-full border border-[#9C7730] px-5 py-3 font-semibold text-[#E0C26B] transition hover:border-[#E0C26B] hover:bg-[#1A1E22]"
     >
       Professional Email
@@ -300,7 +300,7 @@ export default function Home() {
   </div>
 
   <p className="mt-5 text-sm text-[#A1A1AA]">
-    kara@minicommand.org
+    kara@boobsandwrenches.com
   </p>
 </div>
         </section>
